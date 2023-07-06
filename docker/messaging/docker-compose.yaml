@@ -1,4 +1,12 @@
 version: '3'
 services:
   rabbit:
+    environment:
+      - RABBITMQ_DEFAULT_USER=rabbit
+      - RABBITMQ_DEFAULT_PASS=rabbit
     image: rabbitmq:3.6-management-alpine
+    ports:
+      - '5672:5672'
+      - '15672:15672'
+    volumes:
+      - ./rabbitmq-data:/var/lib/rabbitmq

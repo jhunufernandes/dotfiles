@@ -1,10 +1,7 @@
 #!/bin/bash
 
-# tmux
-cp tmux.conf ~/.tmux.conf
+sudo apt update
+sudo apt install neovim
 
-# vim
 cp vimrc ~/.vimrc
-
-#nvim
 cp init.vim ~/.config/nvim/init.vim
